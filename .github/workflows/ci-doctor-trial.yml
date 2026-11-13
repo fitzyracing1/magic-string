@@ -1,0 +1,12 @@
+name: ci-doctor (trial)
+on:
+  push:
+    branches: [try/ci-doctor]
+permissions:
+  contents: read
+jobs:
+  doctor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: fitzyracing1/ci-doctor@feat/initial
